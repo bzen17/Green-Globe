@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-// require and configure dotenv, will load vars in .env in PROCESS.ENV
 require("dotenv").config();
 const Joi = require("joi");
 

@@ -4,12 +4,9 @@ const { UserSchema } = require("../../models/userSchema");
 const config = require("../../config/config");
 const fs = require("fs");
 var path = require("path");
-// eslint-disable-next-line max-len
 var privateKey = fs.readFileSync(path.resolve("private.key"), "utf8");
-//var publicKey = fs.readFileSync('../../../public.key','utf8')
 
 const getJWTToken = async (req, res) => {
-    // console.log(req.body);
     const { data } = req.body;
     const signOptions = {
         issuer: config.issuer,
