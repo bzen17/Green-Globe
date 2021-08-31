@@ -3,12 +3,19 @@ const errorHandler = errorHandlerModule();
 const config = require('../../config/config');
 const bcrypt = require('bcryptjs');
 const {UserSchema} = require('../../models/userSchema');
-const uniqid = require('uniqid');
 
 
 const createUser = async (req, res) => {
   try {
     const {body} = req;
+    const user = await UserSchema.findOne({user_id: req.user_id});
+    if (!user) {
+      return errorHandler.throwNotFoundError(
+        'No User Found with your User ID',
+        req,
+        res
+      );
+    }
     UserSchema.findOne({user_id: body.user_id}).then(async user => {
       if (user) {
         return errorHandler.userExistsError('User Already Exists!', req, res);

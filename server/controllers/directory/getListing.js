@@ -1,11 +1,19 @@
-const {DirectorySchema} = require('../../models/directorySchema');
 const errorHandlerModule = require('../../helpers/error');
 const errorHandler = errorHandlerModule();
+const {DirectorySchema} = require('../../models/directorySchema');
+const {UserSchema} = require('../../models/userSchema');
 
 const getListing = async (req, res) => {
 
   const {params} = req;
-
+  const user = await UserSchema.findOne({user_id: req.user_id});
+    if (!user) {
+      return errorHandler.throwNotFoundError(
+        'No User Found with your User ID',
+        req,
+        res
+      );
+    }
   // params id is required
   if (!params.id) {
     return errorHandler.throwInputValidationError(
@@ -40,16 +48,6 @@ const getListing = async (req, res) => {
 
 const getAllListing = async (req, res) =>{
   try {
-    /* const user = await UserSchema.findOne({user_id: req.user_id}).catch(err=>{
-      console.log(err)
-    });
-    if (!user) {
-      return errorHandler.throwNotFoundError(
-        'No User Found with your User ID',
-        req,
-        res
-      );
-    } */
     const data = await DirectorySchema.find({}).catch(err=>{
       console.log(err)
       return errorHandler.throwInternalServerError('Unable to fetch data from Database', req, res);

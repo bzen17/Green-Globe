@@ -40,7 +40,7 @@ const getUser = async (req, res) => {
 
 const getAllUsers = async (req, res) =>{
   try {
-    /* const user = await UserSchema.findOne({user_id: req.user_id}).catch(err=>{
+    const user = await UserSchema.findOne({user_id: req.user_id}).catch(err=>{
       console.log(err)
     });
     if (!user) {
@@ -49,7 +49,7 @@ const getAllUsers = async (req, res) =>{
         req,
         res
       );
-    } */
+    }
     const data = await UserSchema.find({}).select('-password -__v').catch(err=>{
       console.log(err)
       return errorHandler.throwInternalServerError('Unable to fetch data from Database', req, res);

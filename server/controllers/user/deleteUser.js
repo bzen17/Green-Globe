@@ -6,14 +6,14 @@ const deleteUser = async (req, res) => {
   const {params} = req;
 
   try {
-   /*  const user = await UserSchema.findOne({user_id: req.user_id});
+   const user = await UserSchema.findOne({user_id: req.user_id});
     if (!user) {
       return errorHandler.throwNotFoundError(
         'No User Found with your User ID',
         req,
         res
       );
-    } */
+    }
     // ------------role check--------
       const del_user = await UserSchema.findOne({user_id: params.user_id.toLowerCase()});
       if (!del_user) {
