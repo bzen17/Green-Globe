@@ -6,7 +6,6 @@ const fs = require("fs");
 var path = require("path");
 var publicKey = fs.readFileSync(path.resolve("public.key"), "utf8");
 
-// eslint-disable-next-line max-len
 const authorizer = async (req, res, next) => {
     try {
         if (req.headers["authorization"]) {
