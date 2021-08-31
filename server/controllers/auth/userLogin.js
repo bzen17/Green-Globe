@@ -1,21 +1,32 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const {UserSchema} = require('../../models/userSchema');
-const config = require('../config/config');
-
+const config = require('../../config/config');
+const fs = require('fs');
+var path = require('path');
 // eslint-disable-next-line max-len
+var privateKey = fs.readFileSync(path.resolve('private.key'),'utf8')
+//var publicKey = fs.readFileSync('../../../public.key','utf8')
+
 
 const getJWTToken = async (req, res) =>{
   // console.log(req.body);
-  const {data, exp} = req.body;
-  const jwtToken = jwt.sign(data, config.jwtSignature, {expiresIn: exp});
+  const {data} = req.body;
+  const signOptions = {
+    issuer: config.issuer,
+        subject: config.subject,
+        audience: config.aud,
+        expiresIn: config.exp,
+        algorithm: "RS256"
+  }
+  const jwtToken = jwt.sign(data, privateKey, signOptions);
   
   const response = {
     accessToken: {
-      accessToken: jwtToken,
-      expiresIn: exp
+      token: jwtToken,
+      expiresIn: config.exp,
     },
-    idToken: data
+      idToken: data
   };
   res.json(response);
 };
@@ -34,7 +45,6 @@ const userLogin = async (req, res) => {
       let userData = {
         name: user.name,
         role: user.role,
-        is_active: !user.blocked
       };
       const isMatch = await bcrypt.compare(password, user.password);
       if (isMatch) {
@@ -44,7 +54,6 @@ const userLogin = async (req, res) => {
           ...userData
         };
         req.body.data = userData;
-        req.body.exp = 3600;
         getJWTToken(req, res);
       } else {
         res.status(403).json({

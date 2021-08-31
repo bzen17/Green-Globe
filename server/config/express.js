@@ -40,8 +40,10 @@ mongoose
     // process.exit();
   });
 // eslint-disable-next-line prefer-const
-app.all('/api/*', router);
+app.post('/login', controller.userLogin);
+app.all('/api/*', authorizer);
 app.use('/api', router);
+
 /* app.post('/login', controller.userLogin);
 app.post('/generate-token', controller.getJWTToken); */
 
