@@ -5,7 +5,7 @@ const http = require("http");
 /**
  * Get port from environment and store in Express.
  */
-const port = config.dev_server_port || config.port || "3000";
+const port = config.dev_server_port || config.port || "9096";
 
 console.log("Server Port set to: " + port);
 

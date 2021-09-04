@@ -7,7 +7,7 @@ require('dotenv').config();
 // define validation for all the env vars for REACT_APP_
 const envReactVarsSchema = Joi.object({
   REACT_APP_API_BASE_URL: Joi.string()
-    .default('http://localhost:3000'),
+    .default('http://localhost:9096'),
 }).unknown()
   .required();
 

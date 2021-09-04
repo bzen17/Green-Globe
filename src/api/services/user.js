@@ -1,7 +1,12 @@
-import {axiosPrivate} from '../interceptors';
+import {axiosPrivate,axiosPublic} from '../interceptors';
 import reactConfig from '../../config/reactConfig';
 
 const baseURl = reactConfig.baseUrl;
+
+export const userLogin = () => {
+    const url = `${baseURl}/login`;
+    return axiosPublic.request({url: url, method: 'GET'});
+  };
 
 export const getUser = userID => {
   const url = `${baseURl}/api/user/${userID}`;
