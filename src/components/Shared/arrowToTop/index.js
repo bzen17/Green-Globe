@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import arrow from '../../../assets/arrow.svg';
 
 const TopWrapper = styled.div`
 position: absolute;
@@ -52,7 +51,7 @@ const Arrowtotop = (props) => {
   return (
     <TopWrapper>
       <Arrowfooter className={navigateToTop ? 'arrowWrap arrow-btn-gtm' : 'NoarrowWrap'} onClick={navigateToTop && toTop}>
-        <img className={'arrowIcon arrow-btn-gtm'} src={arrow} alt="arrow" />
+        <img className={'arrowIcon arrow-btn-gtm'} src='/assets/arrow.svg' alt="arrow" />
       </Arrowfooter>
     </TopWrapper>
 

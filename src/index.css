@@ -6,7 +6,10 @@ body {
         "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: 100;
+    font-weight: 500;
+    background: black;
+    padding-right: 0 !important;
+    overflow: auto;
 }
 
 code {
@@ -14,6 +17,14 @@ code {
         monospace;
 }
 
+h1,
+h2 {
+    font-family: Righteous, cursive -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 .d-flex {
     display: flex !important;
 }
@@ -73,4 +84,8 @@ code {
 .MuiList-padding {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
 }

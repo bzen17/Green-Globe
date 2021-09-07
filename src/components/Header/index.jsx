@@ -35,16 +35,27 @@ const Header = (props) => {
     const pushToPage = (page) => {
         setActivePage(page);
         history.push("/" + page);
-        localStorage.removeItem("alignment");
     };
     return (
         <StyledHeader className="header-navv">
-            <StyledMaxWidthSection>
+            <StyledMaxWidthSection maxWidth={false}>
                 <StyledDivContainer className="d-flex align-items-center justify-content-between">
-                    <StyledHeaderLogo
-                        type="image/svg+xml"
-                        aria-label="greeneerg"
-                    ></StyledHeaderLogo>
+                    <StyledDiv
+                        style={{
+                            cursor: "pointer",
+                            display: "flex",
+                            alignItems: "center"
+                        }}
+                        onClick={() => {
+                            pushToPage("");
+                        }}
+                    >
+                        <StyledHeaderLogo
+                            type="image/svg+xml"
+                            aria-label="greeneerg"
+                            href="/"
+                        ></StyledHeaderLogo>
+                    </StyledDiv>
                     <StyledDiv className="d-flex align-items-center justify-content-start">
                         <StyledNavButton
                             onClick={() => {
@@ -60,7 +71,10 @@ const Header = (props) => {
                         >
                             About Us
                         </StyledNavButton>
-                        <StyledNavButton onClick={handleClick}>
+                        <StyledNavButton
+                            onClick={handleClick}
+                            onMouseOver={handleClick}
+                        >
                             Feed
                         </StyledNavButton>
                         <StyledMenu
@@ -70,19 +84,31 @@ const Header = (props) => {
                             open={Boolean(anchorEl)}
                             onClose={handleClose}
                         >
-                            <StyledMenuItem>
+                            <StyledMenuItem
+                                onClick={() => {
+                                    pushToPage("blogs");
+                                }}
+                            >
                                 <ListItemIcon>
                                     <WebIcon fontSize="small" />
                                 </ListItemIcon>
                                 <ListItemText primary="Blogs" />
                             </StyledMenuItem>
-                            <StyledMenuItem>
+                            <StyledMenuItem
+                                onClick={() => {
+                                    pushToPage("news");
+                                }}
+                            >
                                 <ListItemIcon>
                                     <LibraryBooksIcon fontSize="small" />
                                 </ListItemIcon>
                                 <ListItemText primary="News" />
                             </StyledMenuItem>
-                            <StyledMenuItem>
+                            <StyledMenuItem
+                                onClick={() => {
+                                    pushToPage("clips");
+                                }}
+                            >
                                 <ListItemIcon>
                                     <VideoLibraryIcon fontSize="small" />
                                 </ListItemIcon>

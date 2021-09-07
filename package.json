@@ -10,6 +10,7 @@
         "@testing-library/user-event": "^12.8.3",
         "app-root-path": "^3.0.0",
         "bcryptjs": "^2.4.3",
+        "classnames": "^2.3.1",
         "cors": "^2.8.5",
         "joi": "^17.4.2",
         "jsonwebtoken": "^8.5.1",

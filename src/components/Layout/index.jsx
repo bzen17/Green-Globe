@@ -15,10 +15,7 @@ const Layout = (props) => {
     }, []);
     const [navigateToTop, setNavigateToTop] = useState(false);
     return (
-        <div
-            className="d-flex flex-column  justify-content-between"
-            style={{ minHeight: "100vh" }}
-        >
+        <div className="d-flex flex-column " style={{ minHeight: "100vh" }}>
             <>
                 <Header />
                 {props.children}
