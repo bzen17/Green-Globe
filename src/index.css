@@ -7,7 +7,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 500;
-    background: black;
+    background: #eeeeee;
     padding-right: 0 !important;
     overflow: auto;
 }
