@@ -8,6 +8,7 @@ import data1 from "./components/Scrolling Header/data.json";
 import data2 from "./components/Section Carousel/data.json";
 
 const HomePage = (props) => {
+    console.log(window.pageYOffset);
     return (
         <StyledDiv>
             <ScrollingHeader data={data1} />

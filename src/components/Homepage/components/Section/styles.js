@@ -13,11 +13,7 @@ export const StyledSection = styled.div`
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-evenly;
-    background: ${theme.default.colors.primaryDark} ;
-    background-image: url('/assets/section-bg.jpg');
-    background-size: cover;
-    background-position-y: center;
-    background-position-x: center;
+    
 `
 export const ImageBackground = styled.div`
 
@@ -38,4 +34,15 @@ export const StyledContainer = styled.div`
     flex: ${(props)=>props.flex};
     font-size: 1.5rem;
     border-radius: 5px;
+`
+
+export const StyledHeaderTitle = styled.h1`
+    text-align: center;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-top: 1rem;
+    font-family: ${secondaryFont};
+    color: ${secondaryColor};
+    letter-spacing: 1rem;
+    font-size: 2rem;
 `
