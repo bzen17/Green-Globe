@@ -34,9 +34,9 @@ export const VerticalText = (props) =>{
     });
     return (
         <View ref={ref} animate={inView}>
-    {props.string.split("").map((char) => {
+    {props.string.split("").map((char,i) => {
         
-        return char!==' '?<Text>{char}</Text>:<br/>
+        return char!==' '?<Text key={i}>{char}</Text>:<br key={i}/>
     })} 
     </View>)
 }

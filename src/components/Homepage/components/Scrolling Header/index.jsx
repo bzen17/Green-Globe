@@ -20,7 +20,10 @@ class HeaderCarousel extends React.Component {
         this.slide = this.slide.bind(this);
     }
     componentWillMount() {
-        document.body.classList.add("overflow-hidden");
+        if (window.scrollY === 0) {
+            document.body.classList.add("overflow-hidden");
+        }
+
         window.addEventListener("mousewheel", (e) => {
             this.slide(e.wheelDelta / 120);
         });
@@ -67,11 +70,6 @@ class HeaderCarousel extends React.Component {
         if (this.state.activeID === this.props.data.length - 1) {
             document.body.classList.remove("overflow-hidden");
         } else {
-            console.log(
-                this.state.activeID,
-                this.props.data.length - 1,
-                window.scrollY
-            );
             document.body.classList.add("overflow-hidden");
         }
     }
