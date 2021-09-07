@@ -9,7 +9,7 @@ import {
     StyledMenu,
     StyledMenuItem,
     StyledButton
-} from "./style";
+} from "./styles";
 import { StyledDiv, StyledMaxWidthSection } from "./../../style";
 
 import ListItemIcon from "@material-ui/core/ListItemIcon";
