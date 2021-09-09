@@ -7,7 +7,7 @@ const primaryColor = theme.default.colors.primary;
 const secondaryColor = theme.default.colors.secondary;
 
 export const StyledSection = styled.div`
-    height: 41rem;
+    height: 42rem;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
@@ -35,14 +35,20 @@ export const StyledContainer = styled.div`
     font-size: 1.5rem;
     border-radius: 5px;
 `
+const leftToRight = (h) =>keyframes`
+ 0% { transform: translateX(80%);}
+ 100% { transform: translateX(0%); }
+`
 
 export const StyledHeaderTitle = styled.h1`
-    text-align: center;
     margin-block-start: 0px;
     margin-block-end: 0px;
     padding-top: 1rem;
     font-family: ${secondaryFont};
     color: ${secondaryColor};
     letter-spacing: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    margin: 0 2rem;
+    animation-name: ${props => props.animate?leftToRight:''};
+    animation-duration: ${props => props.animate?'2s':''};
 `
