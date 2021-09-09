@@ -81,7 +81,7 @@ const size = {
       primaryLight: '#00dee8',
       primaryDark: '#007c82',
       secondary: '#eeeeee',
-      secondaryLoght: '#ffffff',
+      secondaryLight: '#ffffff',
       secondaryDark:'#d4d4d4',
       themeBlack: '#21232b',
       error: '#ec1e50',
