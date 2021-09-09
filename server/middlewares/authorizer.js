@@ -15,7 +15,6 @@ const authorizer = async (req, res, next) => {
             }
             const verifyOptions = {
                 issuer: config.issuer,
-                subject: config.subject,
                 audience: config.aud,
                 maxAge: "24h",
                 algorithms: ["RS256"]

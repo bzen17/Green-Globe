@@ -1,36 +1,36 @@
 [
     {
         "id": 0,
-        "header": "Gluten-free Bicycle",
-        "body": "Chillwave knausgaard chambray flannel tumblr, narwhal microdosing blog...",
+        "header": "Natural Resource Depletion",
+        "body": "How much will the price of petrol rise before it’s extinct?",
         "colour": "#00adb5",
         "img": "/assets/hero-image.jpg"
     },
     {
         "id": 1,
-        "header": "Post-ironic Disrupt",
-        "body": "Swag biodiesel disrupt retro fashion, salvia food truck kitsch wolf DIY...",
+        "header": "Global Warming",
+        "body": "Feeling warmer yet than you used to?",
         "colour": "#ba9077",
         "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc2.jpg"
     },
     {
         "id": 2,
-        "header": "Lumber-Sexual Roof Party ",
-        "body": "Flexitarian 3 wolf moon cliche, migas scenester street art...",
+        "header": "Pollution",
+        "body": "Did you know Electricity & Heat production is the the largest source followed by Deforestation & Industries?",
         "colour": "#1ABC9C",
         "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc3.jpg"
     },
     {
         "id": 3,
-        "header": "Vegan hoodie trust fund",
-        "body": "Farm-to-table tousled try-hard, normcore ethical tilde iPhone...",
+        "header": "Unsustainable Waste",
+        "body": "Where do you think the plastic food packagings you threw in the bin are gonna end up?",
         "colour": "#C0392B",
         "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc4.jpg"
     },
     {
         "id": 4,
-        "header": "cliche craft beer",
-        "body": "Tote bag flannel normcore polaroid +1. Quinoa actually 90s sustainable...",
+        "header": "Climate Change",
+        "body": "If you do not act today, our planet will soon.",
         "colour": "#513B56",
         "img": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/735173/rvc5.jpg"
     }

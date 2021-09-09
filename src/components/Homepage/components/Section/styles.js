@@ -7,17 +7,13 @@ const primaryColor = theme.default.colors.primary;
 const secondaryColor = theme.default.colors.secondary;
 
 export const StyledSection = styled.div`
-    height: 41rem;
+    height: 42rem;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-evenly;
-    background: ${theme.default.colors.primaryDark} ;
-    background-image: url('/assets/section-bg.jpg');
-    background-size: cover;
-    background-position-y: center;
-    background-position-x: center;
+    
 `
 export const ImageBackground = styled.div`
 
@@ -38,4 +34,21 @@ export const StyledContainer = styled.div`
     flex: ${(props)=>props.flex};
     font-size: 1.5rem;
     border-radius: 5px;
+`
+const leftToRight = (h) =>keyframes`
+ 0% { transform: translateX(80%);}
+ 100% { transform: translateX(0%); }
+`
+
+export const StyledHeaderTitle = styled.h1`
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-top: 1rem;
+    font-family: ${secondaryFont};
+    color: ${secondaryColor};
+    letter-spacing: 1rem;
+    font-size: 2.5rem;
+    margin: 0 2rem;
+    animation-name: ${props => props.animate?leftToRight:''};
+    animation-duration: ${props => props.animate?'2s':''};
 `
