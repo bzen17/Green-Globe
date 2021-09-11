@@ -29,6 +29,10 @@ h2 {
     display: flex !important;
 }
 
+.c-flex {
+    display: flex !important;
+    flex-direction: column !important;
+}
 .flex-column {
     flex-direction: column !important;
 }
@@ -88,4 +92,12 @@ h2 {
 
 .overflow-hidden {
     overflow: hidden !important;
+}
+
+.mb5 {
+    margin-bottom: 5vh;
+}
+
+.is-flipped {
+    transform: rotateY(180deg);
 }
