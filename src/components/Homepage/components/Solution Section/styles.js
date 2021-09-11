@@ -5,40 +5,103 @@ const primaryFont = theme.default.fonts.primary;
 const secondaryFont = theme.default.fonts.secondary;
 const primaryColor = theme.default.colors.primary;
 const secondaryColor = theme.default.colors.secondary;
+
+
 export const SectionBg = styled.div`
-background-image: url('/assets/solution-b.jpg');
+  background-image: url('/assets/solution-b.jpg');
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
-  padding:3rem 0;
+  padding:10vh 0;
+  
 `
 export const Section = styled.div`
   display: flex;
   align-items: stretch;
   height: 80vh;
-  padding:1rem;
-  padding-bottom: 5rem;
   background-color:transparent ;
-  
-  
 `
+
 export const Column = styled.div`
     display: flex;
     flex-flow: ${props=>props.flow!=='row'?props.flow:'row'};
     flex: 1 ;
     margin: 0rem 1rem;
-    align-items: center;
-    
+    align-items: center;    
 `
+
+export const CardTitle = styled.div`
+  display: flex;
+  box-shadow: 0 0 5px 0 black;
+  flex: 1;
+  width:100%;
+  background-image: url('/assets/card-bg.svg');
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  font-family: ${secondaryFont};
+  color:${secondaryColor};
+  font-size: 2rem;
+  padding:1rem 0;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0px 0px 3px #4c4c4c
+
+`
+export const CardBody = styled.div`
+  display: flex;
+  flex: 3;
+  width: 100%;
+  background-image: url('/assets/card-bg.svg');
+  color:${secondaryColor} ;
+  font-size: 1.1rem;
+  align-items: center;
+  font-weight: 500;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+ 
+`
+
+export const CardBodyFront = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding:0 1vw;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  box-shadow: 0 0 5px 0 black;
+  backface-visibility: hidden;
+
+  
+`
+export const CardBodyBack = styled.div`
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  box-shadow: 0 0 5px 0 black;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+`
+
 export const Card = styled.div`
     display: flex;
     flex: 1;
+    flex-direction: column;
     width: 100%;
     height: 45%;
-    background-image: url('/assets/quote-bg-primary.svg');
     margin: 1rem 0;
-    box-shadow: 0 0 5px 0;
-    backdrop-filter: blur(10px);
-    text-align: center;
+    backdrop-filter: blur(5px);
     border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    &:hover ${CardBody}{
+    transform: rotateY(180deg);
+    
+  }
 `
