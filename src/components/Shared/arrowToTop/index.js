@@ -17,24 +17,26 @@ position: absolute;
 const Arrowfooter = styled.div`
     position: fixed;
     width: 2.5rem;
-    height: 2.8125rem;
-    background: #e20074;
+    height: 2.5rem;
+    background: rgba(0,173,181,0.8);
     display: flex;
     align-items: center;
     justify-content: center;
     bottom: 5rem;
     right: 2.8rem;
     opacity: 0;
+    border-radius: 100px;
     transition: opacity 1s ease-in-out;
     z-index: 2;
+    box-shadow: 0 0 5px 0 black;
     
   &:hover {
-    background: #ba0060;
+    background: rgba(0,173,181,1);;
   }
 
   img {
-    width: 0.918rem;
-    height: 1.875rem;
+    width: 1rem;
+    height: 1.5rem;
     transform: rotate(-90deg);
   }
 
