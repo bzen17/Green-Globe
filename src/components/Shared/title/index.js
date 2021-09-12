@@ -34,7 +34,7 @@ const Title = (props)=>{
     return (
         <TitleSection className='mb5'>
             <TitleContainer color={props.color}>
-                <StyledMaxWidthSection maxWidth={true} style={{margin:'0'}}>
+                <StyledMaxWidthSection maxWidth={true} >
                     <TitleText color={props.color}>
                     {props.text}
                     </TitleText>

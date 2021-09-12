@@ -8,7 +8,7 @@ const Solution = (props) => {
     return (
         <SectionBg>
             <Title color="s" text="Let's see how we can solve them..." />
-            <StyledMaxWidthSection>
+            <StyledMaxWidthSection maxWidth={true}>
                 <Section>
                     {data.map((e) => {
                         return (
