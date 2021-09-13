@@ -6,6 +6,7 @@ import Section from "./components/Section";
 import SimpleSection from "./components/Simple Section";
 import VerticalCarousel from "./components/Section Carousel";
 import SolutionSection from "./components/Solution Section";
+import ContactSection from "./components/Contact";
 import data1 from "./components/Scrolling Header/data.json";
 import data2 from "./components/Section Carousel/data.json";
 import Quote from "../Shared/quotes";
@@ -20,6 +21,11 @@ const HomePage = (props) => {
             />
             <SolutionSection></SolutionSection>
             <Quote color="primary" text="Teamwork begins by building trust." />
+            <ContactSection />
+            <Quote
+                color="secondary"
+                text="It is in your hands to create a better world for all who live in it."
+            />
             {/**<Section />
             <VerticalCarousel
                 data={data2.slides}

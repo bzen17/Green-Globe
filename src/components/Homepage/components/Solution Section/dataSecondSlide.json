@@ -1,0 +1,21 @@
+[
+    {
+        "title": "Eclectic Community",
+        "bodyFront": "COMING SOON",
+        "bodyBack": "Here I am"
+    },
+    {
+        "flow": "column",
+        "title": ["Green Lifestyle", "Carbon Coin"],
+        "bodyFront": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu lorem enim. Nullam vel tortor laoreet, condimentum odio a, accumsan orci.",
+            "COMING SOON"
+        ],
+        "bodyBack": ["Here I am", "Here I am"]
+    },
+    {
+        "title": "Eco-Eateries Directory",
+        "bodyFront": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eu lorem enim. Nullam vel tortor laoreet, condimentum odio a, accumsan orci.",
+        "bodyBack": "Here I am"
+    }
+]

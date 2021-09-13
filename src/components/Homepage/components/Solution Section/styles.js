@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
 import * as theme from './../../../../config/theme';
 
 const primaryFont = theme.default.fonts.primary;
@@ -6,14 +6,24 @@ const secondaryFont = theme.default.fonts.secondary;
 const primaryColor = theme.default.colors.primary;
 const secondaryColor = theme.default.colors.secondary;
 
+const slideIn = () => keyframes`
+    0%{
+      transform: translateX(0%);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+  }`;
 
 export const SectionBg = styled.div`
-  background-image: url('/assets/solution-b.jpg');
+  background-image: ${props=>props.selectFirst?"url('/assets/solution-b.jpg')":"url('/assets/hero-image.jpg')"};
   background-size: cover;
+  width: 50%;
   background-position-x: center;
   background-position-y: center;
-  padding:10vh 0;
-  
+  transform: ${props=>props.selectFirst?'translateX(0%)':'translateX(-100%)'};
+  padding:11rem 0;
+  transition: transform 500ms ease-in-out, background-image 500ms ease-in-out ;
 `
 export const Section = styled.div`
   display: flex;

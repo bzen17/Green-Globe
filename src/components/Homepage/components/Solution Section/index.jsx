@@ -1,28 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledMaxWidthSection } from "../../../../style";
 import Title from "../../../Shared/title";
 import { Section, SectionBg } from "./styles";
 import Column from "./column";
-import data from "./data.json";
+import Selector from "./selector";
+import dataFirst from "./dataFirstSlide.json";
+import dataSecond from "./dataSecondSlide.json";
+
 const Solution = (props) => {
+    const [selectFirst, setSelectFirst] = useState(true);
     return (
-        <SectionBg>
+        <div style={{ overflow: "unset", width: "200%", display: "flex" }}>
             <Title color="s" text="Let's see how we can solve them..." />
-            <StyledMaxWidthSection>
-                <Section>
-                    {data.map((e) => {
-                        return (
-                            <Column
-                                flow={e.flow}
-                                title={e.title}
-                                bodyFront={e.bodyFront}
-                                bodyBack={e.bodyBack}
-                            />
-                        );
-                    })}
-                </Section>
-            </StyledMaxWidthSection>
-        </SectionBg>
+            <Selector
+                selectFirst={selectFirst}
+                setSelectFirst={setSelectFirst}
+            />
+            <SectionBg selectFirst={selectFirst}>
+                <StyledMaxWidthSection maxWidth={true}>
+                    <Section>
+                        {dataFirst.map((e) => {
+                            return (
+                                <Column
+                                    flow={e.flow}
+                                    title={e.title}
+                                    bodyFront={e.bodyFront}
+                                    bodyBack={e.bodyBack}
+                                />
+                            );
+                        })}
+                    </Section>
+                </StyledMaxWidthSection>
+            </SectionBg>
+            <SectionBg selectFirst={selectFirst}>
+                <StyledMaxWidthSection maxWidth={true}>
+                    <Section>
+                        {dataSecond.map((e) => {
+                            return (
+                                <Column
+                                    flow={e.flow}
+                                    title={e.title}
+                                    bodyFront={e.bodyFront}
+                                    bodyBack={e.bodyBack}
+                                />
+                            );
+                        })}
+                    </Section>
+                </StyledMaxWidthSection>
+            </SectionBg>
+        </div>
     );
 };
 

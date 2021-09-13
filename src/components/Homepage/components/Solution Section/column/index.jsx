@@ -39,7 +39,6 @@ const Col = (props) => {
                     {title.map((element, i) => {
                         return (
                             <Card>
-                                {console.log("Title", title.slice(i), i)}
                                 <CardTitle>{title[i]}</CardTitle>
                                 <CardBody>
                                     <CardBodyFront>
