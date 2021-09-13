@@ -10,6 +10,7 @@ body {
     background: #eeeeee;
     padding-right: 0 !important;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 code {
