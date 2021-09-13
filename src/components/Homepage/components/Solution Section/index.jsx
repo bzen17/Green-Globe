@@ -4,11 +4,13 @@ import Title from "../../../Shared/title";
 import { Section, SectionBg } from "./styles";
 import Column from "./column";
 import Selector from "./selector";
-import data from "./data.json";
+import dataFirst from "./dataFirstSlide.json";
+import dataSecond from "./dataSecondSlide.json";
+
 const Solution = (props) => {
     const [selectFirst, setSelectFirst] = useState(true);
     return (
-        <div style={{ overflow: "hidden", width: "200%", display: "flex" }}>
+        <div style={{ overflow: "unset", width: "200%", display: "flex" }}>
             <Title color="s" text="Let's see how we can solve them..." />
             <Selector
                 selectFirst={selectFirst}
@@ -17,7 +19,7 @@ const Solution = (props) => {
             <SectionBg selectFirst={selectFirst}>
                 <StyledMaxWidthSection maxWidth={true}>
                     <Section>
-                        {data.map((e) => {
+                        {dataFirst.map((e) => {
                             return (
                                 <Column
                                     flow={e.flow}
@@ -33,7 +35,7 @@ const Solution = (props) => {
             <SectionBg selectFirst={selectFirst}>
                 <StyledMaxWidthSection maxWidth={true}>
                     <Section>
-                        {data.map((e) => {
+                        {dataSecond.map((e) => {
                             return (
                                 <Column
                                     flow={e.flow}
