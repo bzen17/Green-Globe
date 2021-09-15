@@ -111,6 +111,7 @@ export const StyledButton = withStyles((themeMUI) => ({
     padding: '0.25rem 1rem',
     borderRadius: '5px',
     margin: themeMUI.spacing(1),
+    marginLeft: '1.5rem',
     border: `1px solid ${themeMUI.palette.secondary.main}`,
     "&:hover": {
       backgroundColor: themeMUI.palette.primary.main,
