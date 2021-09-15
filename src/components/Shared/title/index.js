@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledMaxWidthSection } from "../../../style";
-import * as theme from './../../../config/theme';
+import * as theme from '../../../config/theme';
 
 const primaryFont = theme.default.fonts.primary;
 const secondaryFont = theme.default.fonts.secondary;
