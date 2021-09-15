@@ -147,9 +147,9 @@ const size = {
       ) {
         return 'max-width: 57rem;';
       } else if (window.innerWidth > size.laptopL) {
-        return 'max-width: 86.25rem;';
+        return 'max-width: 100rem;';
       } else {
-        return 'max-width: 86.25rem;';
+        return 'max-width: 100rem;';
       }
     },
   

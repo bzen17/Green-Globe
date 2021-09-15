@@ -102,3 +102,23 @@ h2 {
 .is-flipped {
     transform: rotateY(180deg);
 }
+
+@keyframes pulsate-15 {
+    0%,
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+.pulsate-15 {
+    -webkit-animation: pulsate-15 10s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation: pulsate-15 10s ease-out;
+    animation-iteration-count: infinite;
+    transform: scale(1);
+}
