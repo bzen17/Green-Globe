@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { VerticalText } from "../../../Shared/verticalText";
+import { VerticalText } from "../../../Shared/VerticalText";
 import { StyledDiv, StyledMaxWidthSection } from "../../../../style";
 import { StyledSection, StyledContainer, StyledHeaderTitle } from "./styles";
 import * as theme from "./../../../../config/theme";

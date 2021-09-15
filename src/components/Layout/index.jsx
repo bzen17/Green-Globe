@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "../Header";
-import Arrowtotop from "../Shared/arrowToTop";
+import Arrowtotop from "../Shared/ArrowToTop";
 
 const Layout = (props) => {
     const handleScroll = (e) => {

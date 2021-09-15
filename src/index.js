@@ -3,15 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { MuiThemeProvider} from '@material-ui/core/styles'; 
-import {ThemeProvider} from 'styled-components';
-import theme from './config/theme';
-import MuiTheme from './config/mui-theme';
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider } from "styled-components";
+import theme from "./config/theme";
+import MuiTheme from "./config/mui-theme";
 ReactDOM.render(
     <MuiThemeProvider theme={MuiTheme}>
         <App />
-    </MuiThemeProvider>
-    ,
+    </MuiThemeProvider>,
     document.getElementById("root")
 );
 

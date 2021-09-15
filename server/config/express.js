@@ -42,7 +42,6 @@ app.post("/login", controller.userLogin);
 app.all("/api/*", authorizer);
 app.use("/api", router);
 
-
 const api = require("../routes/api");
 
 app.use("/ping", api);

@@ -18,7 +18,7 @@ const feedbackSchemaObject = {
         required: true
     },
     parent_id: {
-        type: String,
+        type: String
     },
     timestamp: {
         type: Date,
