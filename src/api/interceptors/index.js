@@ -1,4 +1,4 @@
-import axiosPrivate from './axios-private';
-import axiosPublic from './axios-public';
+import axiosPrivate from "./axios-private";
+import axiosPublic from "./axios-public";
 
-export {axiosPrivate, axiosPublic};
+export { axiosPrivate, axiosPublic };

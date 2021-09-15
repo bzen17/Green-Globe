@@ -1,5 +1,5 @@
-import styled,{keyframes} from 'styled-components';
-import * as theme from './../../../../config/theme';
+import styled, { keyframes } from "styled-components";
+import * as theme from "./../../../../config/theme";
 
 const primaryFont = theme.default.fonts.primary;
 const secondaryFont = theme.default.fonts.secondary;
@@ -13,9 +13,9 @@ export const StyledSection = styled.div`
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-evenly;
-    background:  ${props => props.color==='primary'?primaryColor:secondaryColor};
-    
-`
+    background: ${(props) =>
+        props.color === "primary" ? primaryColor : secondaryColor};
+`;
 
 export const Divider = styled.div`
     width: 100vw;
@@ -26,5 +26,6 @@ export const Divider = styled.div`
     position: relative;
     transform: translateZ(0);
     margin-bottom: -1px;
-    color: ${props => props.color==='primary'?primaryColor:secondaryColor};
-`
+    color: ${(props) =>
+        props.color === "primary" ? primaryColor : secondaryColor};
+`;
