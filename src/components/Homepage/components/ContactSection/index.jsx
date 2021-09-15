@@ -1,20 +1,28 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledMaxWidthSection } from "../../../../style";
-import { Section, ContactContainer, ServiceContainer } from "./styles";
-import Title from "../../../Shared/title";
+import {
+    MainWrapper,
+    Section,
+    ContactContainer,
+    ServiceContainer
+} from "./styles";
+import Ring from "./ServiceList";
+import Title from "../../../Shared/Title";
 
 const ContactSection = (props) => {
     return (
-        <div style={{ display: "flex" }}>
+        <MainWrapper>
             <Title color="primary" text="Contact" className="xyz12" />
             <StyledMaxWidthSection maxWidth={true} style={{ width: "100%" }}>
                 <Section>
-                    <ServiceContainer />
+                    <ServiceContainer>
+                        <Ring />
+                    </ServiceContainer>
                     <ContactContainer />
                 </Section>
             </StyledMaxWidthSection>
-        </div>
+        </MainWrapper>
     );
 };
 
