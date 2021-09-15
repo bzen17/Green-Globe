@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import { StyledDiv, StyledMaxWidthSection } from "../../style";
-import ScrollingHeader from "./components/Scrolling Header";
+import ScrollingHeader from "./components/ScrollingHeader";
 import Section from "./components/Section";
-import SimpleSection from "./components/Simple Section";
-import VerticalCarousel from "./components/Section Carousel";
-import SolutionSection from "./components/Solution Section";
-import ContactSection from "./components/Contact";
-import data1 from "./components/Scrolling Header/data.json";
-import data2 from "./components/Section Carousel/data.json";
-import Quote from "../Shared/quotes";
+import SimpleSection from "./components/SimpleSection";
+import VerticalCarousel from "./components/SectionCarousel";
+import SolutionSection from "./components/SolutionSection";
+import ContactSection from "./components/ContactSection";
+import data1 from "./components/ScrollingHeader/data.json";
+import data2 from "./components/SectionCarousel/data.json";
+import Quote from "../Shared/Quotes";
 const HomePage = (props) => {
     console.log(window.pageYOffset);
     return (
