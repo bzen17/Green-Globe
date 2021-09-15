@@ -1,5 +1,5 @@
 import styled,{keyframes} from "styled-components";
-import * as theme from './../../../../config/theme';
+import * as theme from '../../../../config/theme';
 
 const primaryFont = theme.default.fonts.primary;
 const secondaryFont = theme.default.fonts.secondary;

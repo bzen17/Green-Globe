@@ -6,7 +6,7 @@ import {
     CardBody,
     CardBodyFront,
     CardBodyBack
-} from "./../styles";
+} from "../styles";
 import styled from "styled-components";
 
 const LinkContainer = styled.div`

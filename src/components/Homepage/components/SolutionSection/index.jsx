@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { StyledMaxWidthSection } from "../../../../style";
-import Title from "../../../Shared/title";
+import Title from "../../../Shared/Title";
 import { Section, SectionBg } from "./styles";
-import Column from "./column";
-import Selector from "./selector";
+import Column from "./Column";
+import Selector from "./Selector";
 import dataFirst from "./dataFirstSlide.json";
 import dataSecond from "./dataSecondSlide.json";
 
