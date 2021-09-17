@@ -22,6 +22,7 @@ export const Section = styled.div`
 `;
 
 export const ContactContainer = styled.div`
+    display: flex;
     width: 100%;
     margin-left: 0.5rem;
     box-shadow: 0 0 3px black;
