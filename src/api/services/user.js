@@ -32,3 +32,8 @@ export const deleteUser = (userID) => {
     const url = `${baseURl}/api/user/${userID}`;
     return axiosPrivate.request({ url: url, method: "DELETE" });
 };
+
+export const submitContact = (data) => {
+    const url = `${baseURl}/contact`;
+    return axiosPublic.request({ url: url, data: data, method: "POST" });
+};
