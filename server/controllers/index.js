@@ -4,6 +4,7 @@ const { createUser } = require("./user/createUser");
 const { getUser, getAllUsers } = require("./user/getUser");
 const { deleteUser } = require("./user/deleteUser");
 const { userLogin } = require("./auth/userLogin");
+const { submitContact } = require("./contact/submitContact")
 module.exports = {
     createListing,
     getAllListing,
@@ -12,5 +13,6 @@ module.exports = {
     getUser,
     getAllUsers,
     deleteUser,
-    userLogin
+    userLogin,
+    submitContact
 };
