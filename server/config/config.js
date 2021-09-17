@@ -1,6 +1,6 @@
 require("dotenv").config();
 const Joi = require("joi");
-
+const nodemailer = require("nodemailer");
 // define validation for all the env vars
 const envVarsSchema = Joi.object({
     NODE_ENV: Joi.string().default("development"),
@@ -8,7 +8,10 @@ const envVarsSchema = Joi.object({
     ISSUER: Joi.string().default("Green Globe PVT LTD"),
     SUBJECT: Joi.string().default("no-reply@greenglobe.co.in"),
     AUD: Joi.string().default("www.greenglobe.co.in"),
-    EXPIRES_IN: Joi.string().default("24h")
+    EXPIRES_IN: Joi.string().default("24h"),
+    EMAIL_SERVICE: Joi.string().default("gmail"),
+    EMAIL_AUTH_USER: Joi.string().default("ayan1741995@gmail.com"),
+    EMAIL_AUTH_PASS: Joi.string().default("lokkmtkuaiytqqjn"),
 })
     .unknown()
     .required();
@@ -30,7 +33,15 @@ const config = {
     issuer: envVars.ISSUER,
     subject: envVars.SUBJECT,
     aud: envVars.AUD,
-    exp: envVars.EXPIRES_IN
+    exp: envVars.EXPIRES_IN,
+    contactEmail: envVars.EMAIL_AUTH_USER,
+    emailClient : nodemailer.createTransport({
+        service: envVars.EMAIL_SERVICE,
+        auth: {
+            user: envVars.EMAIL_AUTH_USER,
+            pass: envVars.EMAIL_AUTH_PASS
+        }
+    })
 };
 
 module.exports = config;

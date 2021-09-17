@@ -12,6 +12,7 @@ const mongoose = require("mongoose");
 //const {logger} = require('../core/logger');
 //const {errorHandler} = require('../core/error-handler');
 const { authorizer } = require("../middlewares/authorizer");
+const nodemailer = require("nodemailer");
 //const exceptionHandler = require('../core/exception-handler');
 
 app.use(cors());
@@ -38,6 +39,18 @@ mongoose
         );
         // process.exit();
     });
+
+const contactEmail = config.emailClient
+
+contactEmail.verify((error) => {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log("Ready to Send");
+    }
+});
+
+app.post("/contact", controller.submitContact);
 app.post("/login", controller.userLogin);
 app.all("/api/*", authorizer);
 app.use("/api", router);
