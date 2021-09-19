@@ -13,14 +13,14 @@ import ContactForm from "./ContactForm";
 const ContactSection = (props) => {
     return (
         <MainWrapper>
-            <Title color="primary" text="Contact" className="xyz12" />
+            <Title color="primary" text="Contact" />
             <StyledMaxWidthSection maxWidth={true} style={{ width: "100%" }}>
                 <Section>
                     <ServiceContainer>
                         <Services />
                     </ServiceContainer>
                     <ContactContainer>
-                        <Services />
+                        <ContactForm />
                     </ContactContainer>
                 </Section>
             </StyledMaxWidthSection>
