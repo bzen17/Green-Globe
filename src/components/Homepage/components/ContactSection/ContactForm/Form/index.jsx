@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { Wrapper } from "../../styles";
+import {
+    Wrapper,
+    StyledForm,
+    StyledLabel,
+    StyledInput,
+    StyledTextArea,
+    FormContainer,
+    StyledButton
+} from "../../styles";
 import { submitContact } from "../../../../../../api/services/user";
 
 const Form = () => {
@@ -20,21 +28,35 @@ const Form = () => {
         alert(result.status);
     };
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" id="name" required />
-            </div>
-            <div>
-                <label htmlFor="email">Email:</label>
-                <input type="email" id="email" required />
-            </div>
-            <div>
-                <label htmlFor="message">Message:</label>
-                <textarea id="message" required />
-            </div>
-            <button type="submit">{status}</button>
-        </form>
+        <StyledForm onSubmit={handleSubmit}>
+            <FormContainer>
+                <StyledInput
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required
+                />
+
+                <StyledInput
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                />
+                <StyledInput
+                    type="text"
+                    id="subject"
+                    placeholder="Subject"
+                    required
+                />
+                <StyledTextArea
+                    id="message"
+                    placeholder="Enter your message..."
+                    required
+                />
+                <StyledButton type="submit">{status}</StyledButton>
+            </FormContainer>
+        </StyledForm>
     );
 };
 
