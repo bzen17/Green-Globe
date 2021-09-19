@@ -122,3 +122,30 @@ h2 {
     animation-iteration-count: infinite;
     transform: scale(1);
 }
+
+.gradient {
+    background: linear-gradient(
+        -45deg,
+        #00adb5,
+        #007c82,
+        #d4d4d4,
+        #eeeeee
+    ) !important;
+    background-size: 400% 400%;
+    -webkit-animation: gradient 15s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation: gradient 15s ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
